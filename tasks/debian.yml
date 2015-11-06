@@ -1,0 +1,9 @@
+- name: "Ensure 7zip is installed"
+  apt: >
+    name={{ item }}
+    state=present
+  with_items:
+    - p7zip-full
+  tags:
+    - p7zip
+    - pkgs

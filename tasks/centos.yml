@@ -1,0 +1,10 @@
+- name: "Ensure 7zip is installed"
+  yum: >
+    name={{ item }}
+    state=present
+    enablerepo=epel
+  with_items:
+    - p7zip
+  tags:
+    - p7zip
+    - pkgs

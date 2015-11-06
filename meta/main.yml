@@ -1,0 +1,26 @@
+galaxy_info:
+  author: Frank Lee <flee@wizcorp.jp>
+  description: Installs 7-zip on a server
+  company: Wizcorp K.K.
+  license: MIT
+  min_ansible_version: 1.8.1
+  platforms:
+    - name: EL
+      versions:
+        - 6
+        - 7
+    - name: debian
+      versions:
+        - wheezy
+        - jessie
+  categories:
+    - development
+    - system
+dependencies:
+  - role: aeriscloud.repos
+    repositories:
+      centos6:
+        - epel
+      centos7:
+        - epel
+  - role: aeriscloud.yum
